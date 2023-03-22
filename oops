@@ -1,0 +1,23 @@
+
+// class Vehicle {
+//         constructor(name, companyName, type){
+//             this.name = name;
+//             this.company = companyName;
+//             this.type = type;
+//             this.wheelsCount = 4;
+//         }
+        
+//         run() {
+//             console.log( `${this.name} is running`);
+//         }
+        
+//         refillPetrol() {
+//             console.log(`${this.name} is refilling petrol `);
+//         }
+    
+    
+//         getName(){
+//                console.log(`${this.name}`);
+//         }
+// }
+

@@ -1,0 +1,22 @@
+COMMON QUESTIONS:-
+
+- what is asynchronous ?
+- what are callbacks?
+- what is callback hell
+- what is the difference between async await and promises
+- what are promises?
+- hoisting 
+- closure
+- what will be the result of this:
+	○ consol.log(1)
+	○ setTimeout(
+	…
+	console.log(2)
+	, 0)
+	console.log(3)
+	console.log(4)
+	console.log(5)
+
+- what is an event loop
+- what is an event queue
+what is a call stack

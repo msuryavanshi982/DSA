@@ -1,0 +1,106 @@
+=> Linked list can be defined as collection of objects called nodes that are randomly stored in the memory.
+
+=> A node containes two fields i.e. data stored at the particular address and the pointer whitch contains the address of the next node in the memory.
+
+=> The last node of the list contains the pointer to the null.
+
+* User defined class node :
+
+class Node{
+    //constructor
+    constructor(element){
+        this.element=element;
+        this.next=null;
+    }
+}
+
+
+=>>> create a node =>
+
+syntax= var head= new Node(5) 
+
+=> Linked list class ->
+
+class linkedList{
+    constructor(){
+        this.head=null;
+        this.size=0;
+    }
+}
+
+Note=> when we have one pointer called singly linkedList.
+
+* Iterate throw a linkedList=>
+while(head!=null){
+    console.log(head.data);
+    head=head.next;
+}
+
+// Insertion in linked list : Add a node at the front : 4 steps process.
+
+function push(new_data){
+    // 1 & 2 allocate the node & put in the data
+    var new_node= new Node(new_data);
+
+    // 3. make next of new node as head :
+
+    new_node.next=head;
+
+    // 4.Move the head to point to new node 
+
+    head=new_node;
+} 
+
+===>>> Add a node after a given node :(5 steps process)
+
+e.g. function insertAfter(prev_node, new_data){
+    //1. check if the given node is null 
+    if(pre_node==null){
+        document.write("The given previous node cannot be null")
+        return;
+    }
+    // 2. Allocate the node & 3. put in the data
+
+    let new_data= new Node(new_data);
+
+    // 4. Make next of new Node as next of prev_next
+
+    new_node.next=prev_node.next;
+
+    // 5. make next of prev_node as new_node.
+    prev_node.next= new_node;
+}
+
+// ===>>> Add a node at the end : 6 steps process=>
+
+function append(new_data){
+
+    /* 1. Allocate  the node & 2. put in the data , 3. set next as null */
+
+    var new_node=new Node(new_data);
+
+    //4. If the linked list is empty , then make the new node as head
+
+    if(head==null){
+        head = new Node(new_data)
+        return 
+    }
+
+    // 4. this new node is going to be the last node, so make of it as null.
+
+    new_node.next=null;
+
+    // 5. else traverse till the last node 
+
+    let last =head;
+    while(last.next!=null)
+    last= last.next;
+
+    // 6. change the next of last node
+
+    last.next=new_node;
+    return;
+
+}
+
+// Delete a node//
